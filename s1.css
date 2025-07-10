@@ -1,0 +1,47 @@
+/* 1. Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0f17;
+  color: #eef2f7;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+/* 2. Centering container */
+.wrapper {
+  perspective: 1000px;
+}
+
+/* 3. Sapphire box style */
+.sapphire {
+  position: relative;
+  background: linear-gradient(145deg, #0b3d91, #2759b2);
+  padding: 40px 80px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(11, 61, 145, 0.5);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* 4. Text style inside */
+.sapphire span {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* 5. Hover effect with glow and tilt */
+.sapphire:hover {
+  transform: rotateX(10deg) rotateY(10deg);
+  box-shadow:
+    0 8px 30px rgba(11, 61, 145, 0.5),
+    0 0 60px rgba(39, 89, 178, 0.8),
+    inset 0 0 20px rgba(255,255,255,0.2);
+}
